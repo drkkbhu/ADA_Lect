@@ -23,16 +23,7 @@ knitr::opts_chunk$set(fig.width=12, fig.height=12, warning=FALSE,
 pacman::p_load(tidyverse, ggplot2)
 ```
 
-```{r lineplot}
-data(mtcars)
-str(mtcars)
-ggplot(mtcars, aes(x = hp, y = mpg)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE, color = "red") +
-  labs(title = "Miles per Gallon vs. Horsepower",
-       x = "Horsepower",
-       y = "Miles per Gallon")
-```
+
 
 ```{r boxplot visualization}
 ggplot(mtcars, aes(x = as.factor(cyl), y = mpg)) +
