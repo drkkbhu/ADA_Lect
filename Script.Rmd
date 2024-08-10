@@ -33,3 +33,11 @@ ggplot(mtcars, aes(x = hp, y = mpg)) +
        x = "Horsepower",
        y = "Miles per Gallon")
 ```
+
+```{r boxplot visualization}
+ggplot(mtcars, aes(x = as.factor(cyl), y = mpg)) +
+  geom_boxplot(fill = "lightblue") +
+  labs(title = "Distribution of MPG by Number of Cylinders",
+       x = "Number of Cylinders",
+       y = "Miles per Gallon")
+```
